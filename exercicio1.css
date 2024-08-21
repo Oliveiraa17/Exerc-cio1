@@ -1,0 +1,74 @@
+ {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+        "topo topo topo"
+        "menu-esquerdo conteudo menu-direito"
+        "rodape rodape rodape";
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 100px 1fr 50px;
+    height: 100vh;
+}
+
+.topo {
+    grid-area: topo;
+    background-color: #00b3b3;
+    color: black;
+    text-align: center;
+    padding: 20px;
+}
+
+.menu-esquerdo {
+    grid-area: menu-esquerdo;
+    background-color: #99ccff;
+    padding: 20px;
+}
+
+.conteudo {
+    grid-area: conteudo;
+    background-color: #cccccc;
+    padding: 20px;
+}
+
+.menu-direito {
+    grid-area: menu-direito;
+    background-color: #99ccff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.menu-direito .box {
+    background-color: white;
+    height: 160px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.rodape {
+    grid-area: rodape;
+    background-color: #0099ff;
+    color: black;
+    text-align: center;
+    padding: 10px;
+}
+
+.imagem {
+    position: absolute;
+    bottom: 70px;
+    right: 30px;
+}
+
+.imagem img {
+    width: 100px;
+}
